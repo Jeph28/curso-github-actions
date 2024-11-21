@@ -1,0 +1,12 @@
+name: Aprendiendo github actions
+on:
+  push:
+    branches: [ "aprendiendo-github-actions" ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run script
+        run: node hola.js
